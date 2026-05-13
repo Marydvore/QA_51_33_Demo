@@ -1,6 +1,9 @@
 package dto;
 
 import enams.Gender;
+import enams.Hobbies;
+
+import java.util.List;
 
 public class Student {
     private String firstName;
@@ -10,7 +13,7 @@ public class Student {
     private String mobile;
     private String dateOfBirth;
     private String subjects;
-    private String hobbies;
+    private List<Hobbies> hobbies;
     private String picture;
     private String address;
     private String state;
@@ -22,7 +25,7 @@ public class Student {
     public Student(String firstName, String lastName,
                    String email, Gender gender,
                    String mobile, String dateOfBirth,
-                   String subjects, String hobbies,
+                   String subjects, List<Hobbies> hobbies,
                    String picture, String address,
                    String state, String city) {
         this.firstName = firstName;
@@ -40,6 +43,7 @@ public class Student {
     }
 
     public String getFirstName() {
+
         return firstName;
     }
 
@@ -48,90 +52,112 @@ public class Student {
     }
 
     public String getLastName() {
+
         return lastName;
     }
 
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
 
     public String getEmail() {
+
         return email;
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 
     public Gender getGender() {
+
         return gender;
     }
 
     public void setGender(Gender gender) {
+
         this.gender = gender;
     }
 
     public String getMobile() {
+
         return mobile;
     }
 
     public void setMobile(String mobile) {
+
         this.mobile = mobile;
     }
 
     public String getDateOfBirth() {
+
         return dateOfBirth;
     }
 
     public void setDateOfBirth(String dateOfBirth) {
+
         this.dateOfBirth = dateOfBirth;
     }
 
     public String getSubjects() {
+
         return subjects;
     }
 
     public void setSubjects(String subjects) {
+
         this.subjects = subjects;
     }
 
-    public String getHobbies() {
+    public List<Hobbies> getHobbies() {
+
         return hobbies;
     }
 
-    public void setHobbies(String hobbies) {
+    public void setHobbies(List<Hobbies> hobbies) {
+
         this.hobbies = hobbies;
     }
 
     public String getPicture() {
+
         return picture;
     }
 
     public void setPicture(String picture) {
+
         this.picture = picture;
     }
 
     public String getAddress() {
+
         return address;
     }
 
     public void setAddress(String address) {
+
         this.address = address;
     }
 
     public String getState() {
+
         return state;
     }
 
     public void setState(String state) {
+
         this.state = state;
     }
 
     public String getCity() {
+
         return city;
     }
 
     public void setCity(String city) {
+
         this.city = city;
     }
 }
