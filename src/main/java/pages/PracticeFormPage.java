@@ -40,6 +40,8 @@ public class PracticeFormPage extends BasePage {
     WebElement inputCity;
     @FindBy(xpath = "//button[text()='Submit']")
     WebElement btnSubmit;
+    @FindBy(id = "example-modal-sizes-title-lg")
+    WebElement message;
 
     public void typePracticeForm(Student student) {
         inputFirstName.sendKeys(student.getFirstName());
@@ -51,6 +53,17 @@ public class PracticeFormPage extends BasePage {
         typeSubjects(student.getSubjects());
         typeHobbies(student.getHobbies());
         textareaAddress.sendKeys(student.getAddress());
+        typeStateCity(student.getState(), student.getCity());
+        pause(5000);
+        btnSubmit.click();
+    }
+
+    public boolean validateMessage(){
+        return isTextInElementValid(message, "Thanks for submitting the form");
+    }
+
+    public boolean validateMessageNegative(){
+        return isTextInElementValid(message, "Wrong");
     }
 
     private void typeGender(Gender gender) {
@@ -71,6 +84,14 @@ public class PracticeFormPage extends BasePage {
         }
         inputDateOfBirth.sendKeys(dateOfBirth);
         inputDateOfBirth.sendKeys(Keys.ENTER);
+    }
+
+    private void typeStateCity(String state, String city){
+        inputState.sendKeys(state);
+        inputState.sendKeys(Keys.ENTER);
+
+        inputCity.sendKeys(city);
+        inputCity.sendKeys(Keys.ENTER);
     }
 
     private void typeHobbies(List<Hobbies> hobbies) {

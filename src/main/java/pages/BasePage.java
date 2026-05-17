@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class BasePage {
     static WebDriver driver;
@@ -23,5 +24,7 @@ public class BasePage {
         js.executeScript("document.querySelector('footer').style.display='none'");
     }
 
-
+    public boolean isTextInElementValid(WebElement element, String text){
+        return element.getText().contains(text);
+    }
 }
