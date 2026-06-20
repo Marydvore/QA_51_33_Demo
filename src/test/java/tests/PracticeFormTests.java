@@ -19,7 +19,7 @@ import java.util.List;
 public class PracticeFormTests extends AppManager {
     SoftAssert softAssert = new SoftAssert();
 
-    @Test
+    @Test(groups = "smoke")
     public void practiceFormPositiveTest() {
         List<Hobbies> hobbies = new ArrayList<>();
         hobbies.add(Hobbies.READING);
@@ -50,7 +50,7 @@ public class PracticeFormTests extends AppManager {
 
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void practiceFormPositiveTestWithSoftAssert() {
         List<Hobbies> hobbies = new ArrayList<>();
         hobbies.add(Hobbies.READING);
