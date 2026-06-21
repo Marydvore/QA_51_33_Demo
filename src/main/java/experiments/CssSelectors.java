@@ -76,16 +76,16 @@ public class CssSelectors {
         js.executeScript("document.querySelector('footer').style.display='none'");
     }
 
-    public void scrollActions(){ // метод скролл прокрутка, мне не понадобился
-        Actions actions = new Actions(driver);
-
-        for (int i = 0; i < 10; i++) {
-            actions.scrollByAmount(0, 700).perform();
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
+//    public void scrollActions(){ // метод скролл прокрутка, мне не понадобился
+//        Actions actions = new Actions(driver);
+//
+//        for (int i = 0; i < 10; i++) {
+//            actions.scrollByAmount(0, 700).perform();
+//            try {
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+//    }
 }
