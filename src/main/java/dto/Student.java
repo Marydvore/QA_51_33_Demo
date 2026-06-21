@@ -20,7 +20,7 @@ public class Student {
     private String city;
 
     public Student() {
-    }
+    }//
 
     public Student(String firstName, String lastName,
                    String email, Gender gender,
